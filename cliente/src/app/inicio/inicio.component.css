@@ -1,0 +1,65 @@
+body {
+    background: #F8F5F2;
+}
+
+carousel slide img {
+    display: block; 
+    max-height: 700px;
+    width: 100%;
+    object-fit: cover; /* cumple con las condiciones de height (alto) y width (ancho) y no muestra la parte que se sale*/
+}
+
+#seccionLogin {
+    width: 100%; /* siempre respecto al contenedor en este caso el div con col-8...*/
+    min-height: 400px;
+    background-image: url(../../assets/login.jpg);
+    background-size: cover;
+}
+
+#seccionComida {
+    width: 100%; /* siempre respecto al contenedor en este caso el div con col-8...*/
+    min-height: 400px;
+    background-image: url(../../assets/cargarAlimentos.jpg);
+    background-size: cover;
+}
+
+.bkInfo {
+    background: #F8F5F2;
+    min-height: 300px;
+    margin-top: 50px;
+    -webkit-box-shadow: -36px 34px 0px -23px rgba(218,174,5,1);
+    -moz-box-shadow: -36px 34px 0px -23px rgba(218,174,5,1);
+    box-shadow: -36px 34px 0px -23px rgba(218,174,5,1);
+    
+}
+
+.bkInfo h3 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#cuerpo {
+    color: #5C544C;
+}
+
+#cuerpo h2 {
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+#pie1 {
+    background: #5C544C;
+    color: #F8F5F2;
+}
+
+#pie2 {
+    background: #47433F;
+    color: #F8F5F2;
+
+}
+
+#menu {
+    background: #5C544C;
+    color: #F8F5F2;
+
+}

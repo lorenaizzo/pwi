@@ -1,0 +1,14 @@
+#contenedor {
+    background-image: url('../../assets/bkInterior.jpg');
+    height: 100vh; /* (vertical heigh) el la altura vertical de la pantalla */
+    background-size: cover; 
+}
+
+#cajaInterior {
+    background: rgba(255, 255, 255, 0.9); /* el ultimo valor es alpha y es la transparencia */ 
+}
+
+#cajaFila {
+    height: 100%;
+}
+

@@ -1,0 +1,15 @@
+<div class="container-fluid" id="contenedor">
+    <div class="row d-flex align-items-center" id="cajaFila">
+        <div class="col-md-3 offset-md-7 col-8 offset-3" id="cajaLogin">
+            <h1 class="mt-5">Login</h1>
+            <div *ngIf="error">
+                <alert type="warning">
+                    <strong>Ops!</strong> {{ error }}
+                </alert>
+            </div>
+            <input type="text" class="form-control mt-5" placeholder="Usuario" [(ngModel)]="nombreUsuario" required>
+            <input type="password" class="form-control mt-3" placeholder="Password" [(ngModel)]="password" required>
+            <button class="btn btn-success mt-3" (click)="ingresar()">Ingresar</button>
+        </div>
+    </div>
+</div>

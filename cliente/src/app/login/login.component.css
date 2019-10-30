@@ -1,0 +1,18 @@
+#contenedor {
+    background-image: url('../../assets/bkInterior.jpg');
+    height: 100vh; /* (vertical heigh) el la altura vertical de la pantalla */
+    background-size: cover; 
+}
+
+#cajaLogin {
+    background: rgba(255, 255, 255, 0.9); /* el ultimo valor es alpha y es la transparencia */ 
+    height: 400px;
+    -webkit-box-shadow: -36px 34px 0px -23px rgba(218,174,5,1);
+    -moz-box-shadow: -36px 34px 0px -23px rgba(218,174,5,1);
+    box-shadow: -36px 34px 0px -23px rgba(218,174,5,1);
+
+}
+
+#cajaFila {
+    height: 100%;
+}

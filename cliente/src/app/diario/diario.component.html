@@ -1,0 +1,62 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid" id="contenedor">
+    <div class="row d-flex align-items-center" id="cajaFila">
+        <div class="col-10 offset-1" id="cajaInterior">
+            <h1 class="text-center mt-5">Registro de comidas!</h1>
+            <h2 class="mt-5">Agrega una nueva comida</h2>
+            <div *ngIf="error">
+                <alert type="warning">
+                    <strong>Ops!</strong> {{ error }}
+                </alert>
+            </div>
+
+            <div class="form-group mt-5">
+                <label for="comida">Comida</label>
+                <input type="text" class="form-control" id="comida" [(ngModel)]="comida" required>
+            </div>
+
+            <div class="form-group">
+
+                <label for="fecha">Fecha</label>
+                <input type="text" class="form-control" id="fecha" required [(ngModel)]="fecha" bsDatepicker
+                    [bsConfig]="{ adaptivePosition: true, dateInputFormat: 'DD-MM-YYYY', isAnimated: true }">
+            </div>
+            <div class="form-group">
+                <label for="alimento">Alimentos</label>
+                <input type="text" class="form-control" id="alimento" required [(ngModel)]="alimento">
+            </div>
+
+            <button class="btn btn-success" (click)="enviar()">Enviar</button>
+
+
+            <h2 class="mt-5">Mira las comidas ingeridas en un dia</h2>
+            <div class="form-group mt-5">
+                <label for="fechaBusqueda">Elegi una fecha</label>
+                <input type="text" class="form-control" id="fechaBusqueda" [(ngModel)]="fechaBusqueda"
+                    (ngModelChange)="buscar()" bsDatepicker
+                    [bsConfig]="{ adaptivePosition: true, dateInputFormat: 'DD-MM-YYYY', isAnimated: true }">
+            </div>
+
+
+
+            <table class='table table-striped table-sm'>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Comida</th>
+                        <th>Alimentos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let diario of diarios">
+                        <td>{{ diario.fecha | date: 'dd-MM-yyyy':'UTC'}}</td>
+                        <td>{{ diario.comida }}</td>
+                        <td>{{ diario.alimento }}</td>
+                        <td><button type="button" class="btn btn-danger btn-sm" (click)="borrar(diario._id)"><i
+                                    class="fa fa-trash" title="Borrar"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
