@@ -1,0 +1,19 @@
+<div class="container-fluid" id="contenedor">
+    <div class="row d-flex align-items-center" id="cajaFila">
+        <div class="col-md-3 offset-md-7 col-8 offset-3" id="cajaContacto">
+            <h1 class="mt-5">Contacto</h1>
+            {{#if  error }} 
+            <p> {{ error }} </p>
+            {{/if }}
+            <form method="POST">
+                <input type="text" class="form-control mt-5" placeholder="Nombre" name="nombre" required>
+                <input type="text" class="form-control mt-5" placeholder="Apellido" name="apellido">
+                <input type="email" class="form-control mt-3" placeholder="Email" name="email" required>
+                <textarea class="form-control mt-3" rows="3" placeholder="Mensaje" name="mensaje" required></textarea>
+                <button class="btn btn-success mt-3" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
