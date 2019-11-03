@@ -1,0 +1,16 @@
+<div>
+    <table>
+        <tr>
+            <th>Alimento</th>
+            <th>Comida</th>
+            <th>Fecha</th>
+            <th>Borrar</th>
+        </tr>
+        <tr *ngFor="let unaComida of listado">
+            <td>{{ unaComida.alimento}}</td>
+            <td>{{ unaComida.comida }}</td>
+            <td>{{ unaComida.fecha | date: 'dd-MM-yyyy':'UTC' }}</td>
+            <td><button type="submit" (click)= borrar(unaComida._id)>Borrar</button></td>
+        </tr>
+    </table>
+</div>
